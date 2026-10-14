@@ -3,167 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Porteføljen til Ditt Navn">
-  <title>Ditt Navn — Portefølje</title>
+  <meta name="description" content="Porteføljen til Ditt Navn – prosjekter, ferdigheter og kontaktinformasjon.">
+  <title>Ditt Navn | Portefølje</title>
 
   <style>
     :root {
-      --bakgrunn: #fafaf8;
-      --tekst: #202020;
-      --dempet: #666;
-      --linje: #deded9;
+      --bakgrunn: #0b1020;
+      --kort: #151d32;
+      --tekst: #f4f6fb;
+      --dempet: #aab5ca;
+      --aksent: #78e6c7;
+      --kant: #2a3650;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: var(--bakgrunn);
       color: var(--tekst);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: var(--aksent); }
 
     .container {
-      width: min(760px, calc(100% - 40px));
+      width: min(1100px, calc(100% - 40px));
       margin: 0 auto;
     }
 
     header {
-      border-bottom: 1px solid var(--linje);
+      border-bottom: 1px solid var(--kant);
     }
 
     nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
-      padding: 22px 0;
+      padding: 20px 0;
     }
 
-    .navn {
+    .logo {
+      color: var(--tekst);
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .nav-lenker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-lenker a {
+      color: var(--dempet);
+      text-decoration: none;
+    }
+
+    .nav-lenker a:hover,
+    a:hover { color: #fff; }
+
+    .hero {
+      padding: 110px 0 100px;
+    }
+
+    .eyebrow {
+      color: var(--aksent);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .85rem;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 16px 0;
+      font-size: clamp(2.6rem, 7vw, 5.5rem);
+      line-height: 1.1;
+      letter-spacing: -.05em;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--dempet);
+      font-size: 1.15rem;
+    }
+
+    .knapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .knapp {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--aksent);
+      border-radius: 10px;
+      background: var(--aksent);
+      color: #09231d;
       font-weight: 700;
       text-decoration: none;
     }
 
-    .meny {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+    .knapp:hover {
+      background: #a8f5df;
+      color: #09231d;
     }
 
-    .meny a {
-      color: var(--dempet);
-      font-size: 0.9rem;
-      text-decoration: none;
+    .knapp.sekundaer {
+      background: transparent;
+      color: var(--aksent);
     }
 
-    .meny a:hover,
-    .prosjekt a:hover,
-    .kontakt a:hover {
-      text-decoration: underline;
+    .knapp.sekundaer:hover {
+      background: #182a32;
+      color: #fff;
     }
 
-    main {
-      padding: 80px 0 60px;
-    }
-
-    section {
-      padding-bottom: 80px;
-    }
-
-    h1 {
-      margin: 0 0 20px;
-      font-size: clamp(2.5rem, 7vw, 4.5rem);
-      line-height: 1.1;
-      letter-spacing: -0.05em;
-    }
+    section { padding: 65px 0; }
 
     h2 {
-      margin: 0 0 24px;
-      font-size: 1.35rem;
-      letter-spacing: -0.02em;
-    }
-
-    p {
-      margin: 0 0 18px;
+      margin: 0 0 22px;
+      font-size: 2rem;
     }
 
     .intro {
-      max-width: 620px;
-      color: var(--dempet);
-      font-size: 1.1rem;
-    }
-
-    .cv-knapp {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 11px 18px;
-      border: 1px solid var(--tekst);
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    .cv-knapp:hover {
-      background: var(--tekst);
-      color: var(--bakgrunn);
-    }
-
-    .prosjekt {
-      padding: 24px 0;
-      border-top: 1px solid var(--linje);
-    }
-
-    .prosjekt:last-child {
-      border-bottom: 1px solid var(--linje);
-    }
-
-    .prosjekt h3 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
-    }
-
-    .prosjekt p {
+      max-width: 720px;
       color: var(--dempet);
     }
 
-    .prosjekt a {
-      font-size: 0.95rem;
-      text-underline-offset: 3px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
     }
 
-    .kontakt {
+    .kort {
+      padding: 26px;
+      border: 1px solid var(--kant);
+      border-radius: 16px;
+      background: var(--kort);
+    }
+
+    .kort h3 { margin: 0 0 8px; }
+
+    .kort p {
+      margin: 0 0 18px;
       color: var(--dempet);
+    }
+
+    .tagger {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border: 1px solid var(--kant);
+      border-radius: 999px;
+      color: var(--dempet);
+      font-size: .85rem;
     }
 
     footer {
-      padding: 24px 0;
-      border-top: 1px solid var(--linje);
+      margin-top: 40px;
+      padding: 28px 0;
+      border-top: 1px solid var(--kant);
       color: var(--dempet);
-      font-size: 0.85rem;
+      font-size: .9rem;
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       nav {
         align-items: flex-start;
         flex-direction: column;
-        gap: 10px;
       }
 
-      main {
-        padding-top: 60px;
-      }
+      .hero { padding: 75px 0; }
     }
   </style>
 </head>
@@ -171,77 +197,93 @@
 <body>
   <header>
     <nav class="container" aria-label="Hovedmeny">
-      <a class="navn" href="#">Ditt Navn</a> <!-- BYTT UT -->
-      <div class="meny">
-        <a href="#om-meg">Om meg</a>
+      <a class="logo" href="#">Ditt Navn.</a> <!-- BYTT UT -->
+      <div class="nav-lenker">
+        <a href="#om">Om meg</a>
         <a href="#prosjekter">Prosjekter</a>
         <a href="#kontakt">Kontakt</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
-    <section id="om-meg">
-      <h1>Hei, jeg er Ditt Navn.</h1> <!-- BYTT UT -->
-
-      <div class="intro">
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="eyebrow">Hei, jeg heter Ditt Navn 👋</div> <!-- BYTT UT -->
+        <h1>Jeg lager ting for nettet.</h1> <!-- BYTT UT -->
         <p>
-          Jeg er en [rolle eller kort beskrivelse] med interesse for
-          [det du er opptatt av]. Jeg liker å jobbe med [type arbeid],
-          og er særlig motivert av [noe du ønsker å få til].
-        </p>
+          Jeg er en nysgjerrig utvikler som liker å bygge enkle, nyttige og
+          gjennomtenkte digitale løsninger. Her finner du litt om meg og det jeg jobber med.
+        </p> <!-- BYTT UT -->
+        <div class="knapper">
+          <a class="knapp" href="#prosjekter">Se prosjektene mine</a>
+          <a class="knapp sekundaer" href="https://github.com/DITT-BRUKERNAVN">
+            Min GitHub
+          </a> <!-- BYTT UT: GitHub-brukernavn -->
+        </div>
+      </section>
 
-        <p>
-          Her har jeg samlet noen av prosjektene mine. Du kan også laste ned
-          CV-en min for å lese mer om erfaringen og kompetansen min.
-        </p>
-      </div>
+      <section id="om">
+        <h2>Om meg</h2>
+        <p class="intro">
+          Jeg heter Ditt Navn og er interessert i teknologi, design og problemløsning.
+          Akkurat nå lærer jeg mer om HTML, CSS og JavaScript. På fritiden liker jeg
+          å utforske nye ideer og gjøre dem til små prosjekter.
+        </p> <!-- BYTT UT -->
+      </section>
 
-      <a class="cv-knapp" href="cv.pdf" download="CV-Ditt-Navn.pdf">
-        Last ned CV ↓
-      </a>
-    </section>
+      <section id="prosjekter">
+        <h2>Prosjekter</h2>
+        <p class="intro">Noe av det jeg har laget eller jobber med.</p>
 
-    <section id="prosjekter">
-      <h2>Prosjekter</h2>
+        <div class="grid">
+          <article class="kort">
+            <h3>Prosjekt én</h3> <!-- BYTT UT -->
+            <p>En kort beskrivelse av hva prosjektet gjør, og hvorfor du laget det.</p>
+            <div class="tagger">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-EN">Se prosjektet →</a>
+            <!-- BYTT UT: lenke -->
+          </article>
 
-      <article class="prosjekt">
-        <h3>Prosjekt 1</h3> <!-- BYTT UT -->
-        <p>
-          Beskriv kort hva prosjektet handler om, hva din rolle var,
-          og gjerne hva du lærte.
-        </p>
-        <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-1">
-          Se prosjektet ↗
-        </a> <!-- BYTT UT LENKEN -->
-      </article>
+          <article class="kort">
+            <h3>Prosjekt to</h3> <!-- BYTT UT -->
+            <p>Fortell hva du lærte, eller hvilket problem dette prosjektet løser.</p>
+            <div class="tagger">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Design</span>
+            </div>
+            <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-TO">Se prosjektet →</a>
+            <!-- BYTT UT: lenke -->
+          </article>
 
-      <article class="prosjekt">
-        <h3>Prosjekt 2</h3> <!-- BYTT UT -->
-        <p>
-          Beskriv kort hva du laget, hvilket problem du løste,
-          eller hvilke verktøy du brukte.
-        </p>
-        <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-2">
-          Se prosjektet ↗
-        </a> <!-- BYTT UT LENKEN -->
-      </article>
+          <article class="kort">
+            <h3>Denne porteføljen</h3>
+            <p>En enkel, responsiv nettside laget for å vise frem hvem jeg er og hva jeg lager.</p>
+            <div class="tagger">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a href="https://github.com/DITT-BRUKERNAVN/DITT-REPO">
+              Se koden →
+            </a> <!-- BYTT UT: lenke -->
+          </article>
+        </div>
+      </section>
 
-      <!-- Kopier en <article class="prosjekt">...</article> for flere prosjekter. -->
-    </section>
-
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p class="kontakt">
-        Vil du ta kontakt? Send meg en e-post på
-        <a href="mailto:din.epost@eksempel.no">din.epost@eksempel.no</a>.
-        <!-- BYTT UT E-POSTADRESSEN BEGGE STEDER -->
-      </p>
-    </section>
+      <section id="kontakt">
+        <h2>Ta kontakt</h2>
+        <p class="intro">Har du et spørsmål eller en idé? Send meg gjerne en e-post.</p>
+        <a class="knapp" href="mailto:din.epost@eksempel.no">Send e-post</a>
+        <!-- BYTT UT: e-postadresse -->
+      </section>
+    </div>
   </main>
 
   <footer>
-    <div class="container">© 2026 Ditt Navn</div> <!-- BYTT UT -->
+    <div class="container">© 2026 Ditt Navn. Laget med HTML og CSS.</div> <!-- BYTT UT -->
   </footer>
 </body>
 </html>
