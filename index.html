@@ -200,7 +200,7 @@
     }
 
     /* ==================================================
-       FERDIGHETER – UTEN EKSTRA BOKSER
+       FERDIGHETER – PUNKTLISTER
        ================================================== */
     .ferdigheter-grid {
       display: grid;
@@ -224,9 +224,15 @@
       font-size: 1rem;
     }
 
-    .ferdighet-gruppe p {
-      margin: 0;
+    .ferdighet-gruppe ul {
+      margin: 4px 0 0;
+      padding-left: 20px;
+      color: var(--dempet);
       font-size: .95rem;
+    }
+
+    .ferdighet-gruppe li {
+      margin-bottom: 4px;
     }
 
     /* ==================================================
@@ -377,17 +383,29 @@
 
             <div class="ferdighet-gruppe">
               <h4>Elektrokjemi</h4>
-              <p>EIS (elektrokjemisk impedansspektroskopi), EMF (elektromotorisk spenning) og CV (syklisk voltammetri).</p>
+              <ul>
+                <li>EIS – elektrokjemisk impedansspektroskopi</li>
+                <li>EMF – elektromotorisk spenning</li>
+                <li>CV – syklisk voltammetri</li>
+              </ul>
             </div>
 
             <div class="ferdighet-gruppe">
               <h4>Materialkarakterisering</h4>
-              <p>SEM (skanningelektronmikroskopi), XRD (røntgendiffraksjon), termogravimetri og dilatometri.</p>
+              <ul>
+                <li>SEM – skanningelektronmikroskopi</li>
+                <li>XRD – røntgendiffraksjon</li>
+                <li>Termogravimetri</li>
+                <li>Dilatometri</li>
+              </ul>
             </div>
 
             <div class="ferdighet-gruppe">
               <h4>Uorganisk syntese</h4>
-              <p>APCVD (kjemisk dampavsetning ved atmosfærisk trykk) og SSRS (reaktiv sintring i fast fase).</p>
+              <ul>
+                <li>APCVD – kjemisk dampavsetning ved atmosfærisk trykk</li>
+                <li>SSRS – reaktiv sintring i fast fase</li>
+              </ul>
             </div>
           </article>
 
@@ -397,17 +415,25 @@
 
             <div class="ferdighet-gruppe">
               <h4>CFD (strømningssimulering)</h4>
-              <p>SimScale, OpenFOAM og FreeCAD.</p>
+              <ul>
+                <li>SimScale</li>
+                <li>OpenFOAM</li>
+                <li>FreeCAD</li>
+              </ul>
             </div>
 
             <div class="ferdighet-gruppe">
               <h4>Forsøksdesign (DoE)</h4>
-              <p>MODDE.</p>
+              <ul>
+                <li>MODDE</li>
+              </ul>
             </div>
 
             <div class="ferdighet-gruppe">
               <h4>Databehandling og utforskende dataanalyse</h4>
-              <p>Python.</p>
+              <ul>
+                <li>Python</li>
+              </ul>
             </div>
           </article>
 
@@ -417,12 +443,17 @@
 
             <div class="ferdighet-gruppe">
               <h4>CAD (datamaskinassistert konstruksjon)</h4>
-              <p>Onshape og FreeCAD.</p>
+              <ul>
+                <li>Onshape</li>
+                <li>FreeCAD</li>
+              </ul>
             </div>
 
             <div class="ferdighet-gruppe">
               <h4>3D-printing</h4>
-              <p>Bambu Lab P1S med AMS.</p>
+              <ul>
+                <li>Bambu Lab P1S med AMS</li>
+              </ul>
             </div>
           </article>
         </div>
@@ -536,5 +567,4 @@
        BUNNTEKST
        ================================================== -->
   <footer>
-    <div class="container">© 2026 Henry Chen.</div>
-  </
+    <div class="container">© 2026 Henry Chen.</div
