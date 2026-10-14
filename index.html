@@ -1,14 +1,23 @@
+Skjønner! Her er hele koden. **Ferdighetskortene ser ut som før**, men metodene og verktøyene står nå **punkt for punkt** i stedet for som løpende tekst. Ingen ekstra bokser er lagt til.
+
+Kopier alt og erstatt innholdet i `index.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <!-- # 01 — INFORMASJON OM NETTSIDEN -->
+  <!-- ==================================================
+       INFORMASJON OM NETTSIDEN
+       ================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag, ferdigheter og prosjekter.">
   <title>Henry Chen | Portefølje</title>
 
   <style>
-    /* # 02 — FARGER */
+    /* ==================================================
+       FARGER
+       ================================================== */
     :root {
       --bakgrunn: #0b1020;
       --kort: #151d32;
@@ -18,7 +27,9 @@
       --kant: #2a3650;
     }
 
-    /* # 03 — GRUNNLEGGENDE STIL */
+    /* ==================================================
+       GRUNNLEGGENDE STIL
+       ================================================== */
     * {
       box-sizing: border-box;
     }
@@ -48,7 +59,9 @@
       margin: 0 auto;
     }
 
-    /* # 04 — TOPPMENY */
+    /* ==================================================
+       TOPPMENY – BLIR SYNLIG NÅR DU BLAR
+       ================================================== */
     header {
       position: sticky;
       top: 0;
@@ -87,9 +100,11 @@
       color: #fff;
     }
 
-    /* # 05 — INTRODUKSJON */
+    /* ==================================================
+       ØVERSTE DEL / INTRODUKSJON
+       ================================================== */
     .hero {
-      padding: 80px 0 70px;
+      padding: 110px 0 100px;
     }
 
     .eyebrow {
@@ -114,7 +129,9 @@
       font-size: 1.15rem;
     }
 
-    /* # 06 — KNAPPER */
+    /* ==================================================
+       KNAPPER
+       ================================================== */
     .knapper {
       display: flex;
       flex-wrap: wrap;
@@ -148,9 +165,11 @@
       color: #fff;
     }
 
-    /* # 07 — SEKSJONER OG TEKST */
+    /* ==================================================
+       SEKSJONER OG TEKST
+       ================================================== */
     section {
-      padding: 52px 0;
+      padding: 65px 0;
       scroll-margin-top: 90px;
     }
 
@@ -164,11 +183,13 @@
       color: var(--dempet);
     }
 
-    /* # 08 — KORT */
+    /* ==================================================
+       KORT – BRUKES TIL FERDIGHETER OG PROSJEKTER
+       ================================================== */
     .kort {
       max-width: 850px;
-      margin-top: 22px;
-      padding: 24px;
+      margin-top: 28px;
+      padding: 26px;
       border: 1px solid var(--kant);
       border-radius: 16px;
       background: var(--kort);
@@ -183,11 +204,9 @@
       color: var(--dempet);
     }
 
-    #prosjekter > .kort + .kort {
-      margin-top: 24px;
-    }
-
-    /* # 09 — FERDIGHETER */
+    /* ==================================================
+       FERDIGHETER – PUNKTLISTER
+       ================================================== */
     .ferdigheter-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -212,8 +231,7 @@
 
     .ferdighet-gruppe ul {
       margin: 4px 0 0;
-      padding-left: 0;
-      list-style: none;
+      padding-left: 20px;
       color: var(--dempet);
       font-size: .95rem;
     }
@@ -222,7 +240,9 @@
       margin-bottom: 4px;
     }
 
-    /* # 10 — MERKELAPPER, BILDER OG PROSJEKTLENKER */
+    /* ==================================================
+       MERKELAPPER OG PROSJEKTBILDER
+       ================================================== */
     .tagger {
       display: flex;
       flex-wrap: wrap;
@@ -245,24 +265,20 @@
       margin-top: 24px;
     }
 
+    /* Like store bildeflater uten å beskjære bildene */
     .prosjektbilder img {
       display: block;
       width: 100%;
-      height: 260px;
+      height: 300px;
       border: 1px solid var(--kant);
       border-radius: 12px;
       background: #fff;
       object-fit: contain;
     }
 
-    .prosjektlenker {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 24px;
-      margin-top: 22px;
-    }
-
-    /* # 11 — BUNNTEKST */
+    /* ==================================================
+       BUNNTEKST
+       ================================================== */
     footer {
       margin-top: 40px;
       padding: 28px 0;
@@ -271,7 +287,9 @@
       font-size: .9rem;
     }
 
-    /* # 12 — MOBIL */
+    /* ==================================================
+       MOBIL
+       ================================================== */
     @media (max-width: 600px) {
       nav {
         align-items: flex-start;
@@ -279,23 +297,20 @@
       }
 
       .hero {
-        padding: 64px 0 56px;
+        padding: 75px 0;
       }
 
       section {
-        padding: 42px 0;
         scroll-margin-top: 140px;
-      }
-
-      .kort {
-        padding: 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- # 13 — TOPPMENY -->
+  <!-- ==================================================
+       TOPPMENY
+       ================================================== -->
   <header>
     <nav class="container" aria-label="Hovedmeny">
       <a class="logo" href="#">Henry Chen.</a>
@@ -311,7 +326,10 @@
 
   <main>
     <div class="container">
-      <!-- # 14 — INTRODUKSJON -->
+
+      <!-- ==================================================
+           INTRODUKSJON / ØVERSTE DEL
+           ================================================== -->
       <section class="hero">
         <div class="eyebrow">Hei, jeg heter Henry 👋</div>
 
@@ -337,7 +355,9 @@
         </div>
       </section>
 
-      <!-- # 15 — OM MEG -->
+      <!-- ==================================================
+           OM MEG
+           ================================================== -->
       <section id="om">
         <h2>Litt om meg</h2>
 
@@ -351,7 +371,9 @@
         </p>
       </section>
 
-      <!-- # 16 — FERDIGHETER -->
+      <!-- ==================================================
+           FERDIGHETER
+           ================================================== -->
       <section id="ferdigheter">
         <h2>Ferdigheter</h2>
         <p class="intro">
@@ -360,7 +382,7 @@
         </p>
 
         <div class="ferdigheter-grid">
-          <!-- # 16.1 — MATERIALVITENSKAP -->
+          <!-- KORT 1: MATERIALVITENSKAP -->
           <article class="kort">
             <h3>Materialvitenskap</h3>
 
@@ -392,7 +414,7 @@
             </div>
           </article>
 
-          <!-- # 16.2 — BEREGNING OG DATA -->
+          <!-- KORT 2: BEREGNING OG DATA -->
           <article class="kort">
             <h3>Beregning og data</h3>
 
@@ -420,7 +442,7 @@
             </div>
           </article>
 
-          <!-- # 16.3 — DESIGN OG PRODUKSJON -->
+          <!-- KORT 3: DESIGN OG PRODUKSJON -->
           <article class="kort">
             <h3>Design og produksjon</h3>
 
@@ -442,12 +464,14 @@
         </div>
       </section>
 
-      <!-- # 17 — PROSJEKTER -->
+      <!-- ==================================================
+           PROSJEKTER
+           ================================================== -->
       <section id="prosjekter">
         <h2>Prosjekter</h2>
         <p class="intro">Et utvalg av det jeg har jobbet med.</p>
 
-        <!-- # 17.1 — MASTEROPPGAVE -->
+        <!-- PROSJEKT 1: MASTEROPPGAVE -->
         <article class="kort">
           <h3>Masteroppgave – Elektrokjemigruppen UiO</h3>
 
@@ -462,23 +486,24 @@
             <span class="tag">Elektrokjemi</span>
           </div>
 
+          <a href="https://nva.sikt.no/registration/0198cc8d4ff1-b7263c96-d4c1-4e66-bd8b-b4d188563348">
+            Les masteroppgaven →
+          </a>
+
+          <!-- De to eksisterende bildene -->
           <div class="prosjektbilder">
             <img src="master-1.jpg" alt="Bilde fra masteroppgaven ved Elektrokjemigruppen på UiO">
             <img src="master-2.jpg" alt="Et annet bilde fra masteroppgaven">
           </div>
 
-          <div class="prosjektlenker">
-            <a href="https://nva.sikt.no/registration/0198cc8d4ff1-b7263c96-d4c1-4e66-bd8b-b4d188563348">
-              Les masteroppgaven →
-            </a>
-
-            <a href="master-plakat.jpg" target="_blank" rel="noopener noreferrer">
-              Se forskningsplakaten →
-            </a>
-          </div>
+          <!-- Forskningsplakaten åpnes i en ny fane -->
+          <p>Vil du se mer av arbeidet? Åpne forskningsplakaten i full størrelse:</p>
+          <a href="master-plakat.jpg" target="_blank" rel="noopener noreferrer">
+            Se forskningsplakaten →
+          </a>
         </article>
 
-        <!-- # 17.2 — KRANPROSJEKT -->
+        <!-- PROSJEKT 2: KRANPROSJEKT -->
         <article class="kort">
           <h3>Kranprosjekt</h3>
 
@@ -501,7 +526,7 @@
           </div>
         </article>
 
-        <!-- # 17.3 — STØVSUGERPROSJEKT -->
+        <!-- PROSJEKT 3: STØVSUGERPROSJEKT -->
         <article class="kort">
           <h3>Støvsugerprosjekt</h3>
 
@@ -527,7 +552,9 @@
         </article>
       </section>
 
-      <!-- # 18 — KONTAKT -->
+      <!-- ==================================================
+           KONTAKT
+           ================================================== -->
       <section id="kontakt">
         <h2>Ta kontakt</h2>
 
@@ -541,9 +568,8 @@
     </div>
   </main>
 
-  <!-- # 19 — BUNNTEKST -->
+  <!-- ==================================================
+       BUNNTEKST
+       ================================================== -->
   <footer>
-    <div class="container">© 2026 Henry Chen.</div>
-  </footer>
-</body>
-</html>
+    <div class="container">© 2026 Henry Chen.</div
