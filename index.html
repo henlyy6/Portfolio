@@ -236,7 +236,7 @@
     }
 
     /* ==================================================
-       MERKELAPPER OG PROSJEKTBILDER
+       MERKELAPPER, PROSJEKTBILDER OG LENKER
        ================================================== */
     .tagger {
       display: flex;
@@ -269,6 +269,14 @@
       border-radius: 12px;
       background: #fff;
       object-fit: contain;
+    }
+
+    /* Lenker nederst i masteroppgavekortet */
+    .prosjektlenker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-top: 22px;
     }
 
     /* ==================================================
@@ -481,21 +489,22 @@
             <span class="tag">Elektrokjemi</span>
           </div>
 
-          <a href="https://nva.sikt.no/registration/0198cc8d4ff1-b7263c96-d4c1-4e66-bd8b-b4d188563348">
-            Les masteroppgaven →
-          </a>
-
           <!-- De to eksisterende bildene -->
           <div class="prosjektbilder">
             <img src="master-1.jpg" alt="Bilde fra masteroppgaven ved Elektrokjemigruppen på UiO">
             <img src="master-2.jpg" alt="Et annet bilde fra masteroppgaven">
           </div>
 
-          <!-- Forskningsplakaten åpnes i en ny fane -->
-          <p>Vil du se mer av arbeidet? Åpne forskningsplakaten i full størrelse:</p>
-          <a href="master-plakat.jpg" target="_blank" rel="noopener noreferrer">
-            Se forskningsplakaten →
-          </a>
+          <!-- Lenker samlet nederst -->
+          <div class="prosjektlenker">
+            <a href="https://nva.sikt.no/registration/0198cc8d4ff1-b7263c96-d4c1-4e66-bd8b-b4d188563348">
+              Les masteroppgaven →
+            </a>
+
+            <a href="master-plakat.jpg" target="_blank" rel="noopener noreferrer">
+              Se forskningsplakaten →
+            </a>
+          </div>
         </article>
 
         <!-- PROSJEKT 2: KRANPROSJEKT -->
@@ -558,13 +567,4 @@
           Send meg gjerne en e-post.
         </p>
 
-        <a class="knapp" href="mailto:henrychens@outlook.com">Send e-post</a>
-      </section>
-    </div>
-  </main>
-
-  <!-- ==================================================
-       BUNNTEKST
-       ================================================== -->
-  <footer>
-    <div class="container">© 2026 Henry Chen.</div
+       
