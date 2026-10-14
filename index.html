@@ -2,12 +2,12 @@
 <html lang="no">
 <head>
   <!-- ==================================================
-       GRUNNLEGGENDE INFORMASJON OM NETTSIDEN
+       INFORMASJON OM NETTSIDEN
        ================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag, ferdigheter og prosjekter.">
-  <title>Henry Chen | Portefølje</title> 
+  <title>Henry Chen | Portefølje</title>
 
   <style>
     /* ==================================================
@@ -55,9 +55,13 @@
     }
 
     /* ==================================================
-       TOPPMENY
+       TOPPMENY – BLIR SYNLIG NÅR DU BLAR
        ================================================== */
     header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bakgrunn);
       border-bottom: 1px solid var(--kant);
     }
 
@@ -161,6 +165,7 @@
        ================================================== */
     section {
       padding: 65px 0;
+      scroll-margin-top: 90px;
     }
 
     h2 {
@@ -249,7 +254,7 @@
       margin-top: 24px;
     }
 
-    /* Like store bildeflater, uten at bildene kuttes */
+    /* Like store bildeflater uten å beskjære bildene */
     .prosjektbilder img {
       display: block;
       width: 100%;
@@ -282,6 +287,10 @@
 
       .hero {
         padding: 75px 0;
+      }
+
+      section {
+        scroll-margin-top: 140px;
       }
     }
   </style>
@@ -426,32 +435,6 @@
         <h2>Prosjekter</h2>
         <p class="intro">Et utvalg av det jeg har jobbet med.</p>
 
-        <!-- PROSJEKT 3: STØVSUGERPROSJEKT -->
-        <article class="kort">
-          <h3>Støvsugerprosjekt</h3>
-
-          <p>
-            Utarbeidet et produksjonsklart designunderlag for en støvsuger.
-            Brukte prinsipper for produksjonsvennlig design (DFM) for å gjøre
-            produksjon og modulær montering enklere. Valgte motor og
-            standardkomponenter ut fra krav til sugeevne, luftstrøm og kostnad.
-            Vurderte mulige feilmoduser med DFMEA og tok hensyn til relevante
-            prinsipper for kvalitetsstyring i ISO 9001.
-          </p>
-
-          <div class="tagger" aria-label="Temaer">
-            <span class="tag">Produktdesign</span>
-            <span class="tag">DFM</span>
-            <span class="tag">DFMEA</span>
-          </div>
-
-          <!-- Last opp bildene ved siden av index.html -->
-          <div class="prosjektbilder">
-            <img src="stovsuger-1.jpg" alt="Oversiktsbilde av designet for støvsugeren">
-            <img src="stovsuger-2.jpg" alt="Detaljbilde fra støvsugerprosjektet">
-          </div>
-        </article>
-        
         <!-- PROSJEKT 1: KRANPROSJEKT -->
         <article class="kort">
           <h3>Kranprosjekt</h3>
@@ -495,6 +478,32 @@
             <img src="master-2.jpg" alt="Et annet bilde fra masteroppgaven">
           </div>
         </article>
+
+        <!-- PROSJEKT 3: STØVSUGERPROSJEKT -->
+        <article class="kort">
+          <h3>Støvsugerprosjekt</h3>
+
+          <p>
+            Utarbeidet et produksjonsklart designunderlag for en støvsuger.
+            Brukte prinsipper for produksjonsvennlig design (DFM) for å gjøre
+            produksjon og modulær montering enklere. Valgte motor og
+            standardkomponenter ut fra krav til sugeevne, luftstrøm og kostnad.
+            Vurderte mulige feilmoduser med DFMEA og tok hensyn til relevante
+            prinsipper for kvalitetsstyring i ISO 9001.
+          </p>
+
+          <div class="tagger" aria-label="Temaer">
+            <span class="tag">Produktdesign</span>
+            <span class="tag">DFM</span>
+            <span class="tag">DFMEA</span>
+          </div>
+
+          <!-- Last opp bildefilene ved siden av index.html -->
+          <div class="prosjektbilder">
+            <img src="stovsuger-1.jpg" alt="Oversiktsbilde av designet for støvsugeren">
+            <img src="stovsuger-2.jpg" alt="Detaljbilde fra støvsugerprosjektet">
+          </div>
+        </article>
       </section>
 
       <!-- ==================================================
@@ -517,4 +526,7 @@
        BUNNTEKST
        ================================================== -->
   <footer>
-    <div class="container">© 2026 Henry Chen.</
+    <div class="container">© 2026 Henry Chen.</div>
+  </footer>
+</body>
+</html>
