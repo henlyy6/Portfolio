@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Porteføljen til Ditt Navn – prosjekter, ferdigheter og kontaktinformasjon.">
+  <title>Ditt Navn | Portefølje</title>
+
+  <style>
+    :root {
+      --bakgrunn: #0b1020;
+      --kort: #151d32;
+      --tekst: #f4f6fb;
+      --dempet: #aab5ca;
+      --aksent: #78e6c7;
+      --kant: #2a3650;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bakgrunn);
+      color: var(--tekst);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: var(--aksent); }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--kant);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .logo {
+      color: var(--tekst);
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .nav-lenker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-lenker a {
+      color: var(--dempet);
+      text-decoration: none;
+    }
+
+    .nav-lenker a:hover,
+    a:hover { color: #fff; }
+
+    .hero {
+      padding: 110px 0 100px;
+    }
+
+    .eyebrow {
+      color: var(--aksent);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .85rem;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 16px 0;
+      font-size: clamp(2.6rem, 7vw, 5.5rem);
+      line-height: 1.1;
+      letter-spacing: -.05em;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--dempet);
+      font-size: 1.15rem;
+    }
+
+    .knapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .knapp {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--aksent);
+      border-radius: 10px;
+      background: var(--aksent);
+      color: #09231d;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .knapp:hover {
+      background: #a8f5df;
+      color: #09231d;
+    }
+
+    .knapp.sekundaer {
+      background: transparent;
+      color: var(--aksent);
+    }
+
+    .knapp.sekundaer:hover {
+      background: #182a32;
+      color: #fff;
+    }
+
+    section { padding: 65px 0; }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: 2rem;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: var(--dempet);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .kort {
+      padding: 26px;
+      border: 1px solid var(--kant);
+      border-radius: 16px;
+      background: var(--kort);
+    }
+
+    .kort h3 { margin: 0 0 8px; }
+
+    .kort p {
+      margin: 0 0 18px;
+      color: var(--dempet);
+    }
+
+    .tagger {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border: 1px solid var(--kant);
+      border-radius: 999px;
+      color: var(--dempet);
+      font-size: .85rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 28px 0;
+      border-top: 1px solid var(--kant);
+      color: var(--dempet);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero { padding: 75px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container" aria-label="Hovedmeny">
+      <a class="logo" href="#">Ditt Navn.</a> <!-- BYTT UT -->
+      <div class="nav-lenker">
+        <a href="#om">Om meg</a>
+        <a href="#prosjekter">Prosjekter</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="eyebrow">Hei, jeg heter Ditt Navn 👋</div> <!-- BYTT UT -->
+        <h1>Jeg lager ting for nettet.</h1> <!-- BYTT UT -->
+        <p>
+          Jeg er en nysgjerrig utvikler som liker å bygge enkle, nyttige og
+          gjennomtenkte digitale løsninger. Her finner du litt om meg og det jeg jobber med.
+        </p> <!-- BYTT UT -->
+        <div class="knapper">
+          <a class="knapp" href="#prosjekter">Se prosjektene mine</a>
+          <a class="knapp sekundaer" href="https://github.com/DITT-BRUKERNAVN">
+            Min GitHub
+          </a> <!-- BYTT UT: GitHub-brukernavn -->
+        </div>
+      </section>
+
+      <section id="om">
+        <h2>Om meg</h2>
+        <p class="intro">
+          Jeg heter Ditt Navn og er interessert i teknologi, design og problemløsning.
+          Akkurat nå lærer jeg mer om HTML, CSS og JavaScript. På fritiden liker jeg
+          å utforske nye ideer og gjøre dem til små prosjekter.
+        </p> <!-- BYTT UT -->
+      </section>
+
+      <section id="prosjekter">
+        <h2>Prosjekter</h2>
+        <p class="intro">Noe av det jeg har laget eller jobber med.</p>
+
+        <div class="grid">
+          <article class="kort">
+            <h3>Prosjekt én</h3> <!-- BYTT UT -->
+            <p>En kort beskrivelse av hva prosjektet gjør, og hvorfor du laget det.</p>
+            <div class="tagger">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-EN">Se prosjektet →</a>
+            <!-- BYTT UT: lenke -->
+          </article>
+
+          <article class="kort">
+            <h3>Prosjekt to</h3> <!-- BYTT UT -->
+            <p>Fortell hva du lærte, eller hvilket problem dette prosjektet løser.</p>
+            <div class="tagger">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Design</span>
+            </div>
+            <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-TO">Se prosjektet →</a>
+            <!-- BYTT UT: lenke -->
+          </article>
+
+          <article class="kort">
+            <h3>Denne porteføljen</h3>
+            <p>En enkel, responsiv nettside laget for å vise frem hvem jeg er og hva jeg lager.</p>
+            <div class="tagger">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a href="https://github.com/DITT-BRUKERNAVN/DITT-REPO">
+              Se koden →
+            </a> <!-- BYTT UT: lenke -->
+          </article>
+        </div>
+      </section>
+
+      <section id="kontakt">
+        <h2>Ta kontakt</h2>
+        <p class="intro">Har du et spørsmål eller en idé? Send meg gjerne en e-post.</p>
+        <a class="knapp" href="mailto:din.epost@eksempel.no">Send e-post</a>
+        <!-- BYTT UT: e-postadresse -->
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Ditt Navn. Laget med HTML og CSS.</div> <!-- BYTT UT -->
+  </footer>
+</body>
+</html>
