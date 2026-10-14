@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Porteføljen til Ditt Navn – prosjekter, ferdigheter og kontaktinformasjon.">
-  <title>Ditt Navn | Portefølje</title>
+  <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag og prosjekter.">
+  <title>Henry Chen | Portefølje</title>
 
   <style>
     :root {
@@ -16,9 +16,13 @@
       --kant: #2a3650;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -28,7 +32,13 @@
       line-height: 1.6;
     }
 
-    a { color: var(--aksent); }
+    a {
+      color: var(--aksent);
+    }
+
+    a:hover {
+      color: #fff;
+    }
 
     .container {
       width: min(1100px, calc(100% - 40px));
@@ -49,9 +59,9 @@
 
     .logo {
       color: var(--tekst);
+      font-size: 1.2rem;
       font-weight: 800;
       text-decoration: none;
-      font-size: 1.2rem;
     }
 
     .nav-lenker {
@@ -65,8 +75,9 @@
       text-decoration: none;
     }
 
-    .nav-lenker a:hover,
-    a:hover { color: #fff; }
+    .nav-lenker a:hover {
+      color: #fff;
+    }
 
     .hero {
       padding: 110px 0 100px;
@@ -74,14 +85,14 @@
 
     .eyebrow {
       color: var(--aksent);
+      font-size: .85rem;
       font-weight: 700;
       letter-spacing: .08em;
       text-transform: uppercase;
-      font-size: .85rem;
     }
 
     h1 {
-      max-width: 850px;
+      max-width: 900px;
       margin: 16px 0;
       font-size: clamp(2.6rem, 7vw, 5.5rem);
       line-height: 1.1;
@@ -89,7 +100,7 @@
     }
 
     .hero p {
-      max-width: 650px;
+      max-width: 680px;
       color: var(--dempet);
       font-size: 1.15rem;
     }
@@ -127,7 +138,9 @@
       color: #fff;
     }
 
-    section { padding: 65px 0; }
+    section {
+      padding: 65px 0;
+    }
 
     h2 {
       margin: 0 0 22px;
@@ -135,28 +148,25 @@
     }
 
     .intro {
-      max-width: 720px;
+      max-width: 760px;
       color: var(--dempet);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-
     .kort {
+      max-width: 850px;
+      margin-top: 28px;
       padding: 26px;
       border: 1px solid var(--kant);
       border-radius: 16px;
       background: var(--kort);
     }
 
-    .kort h3 { margin: 0 0 8px; }
+    .kort h3 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+    }
 
     .kort p {
-      margin: 0 0 18px;
       color: var(--dempet);
     }
 
@@ -164,7 +174,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 18px;
+      margin: 20px 0;
     }
 
     .tag {
@@ -173,6 +183,22 @@
       border-radius: 999px;
       color: var(--dempet);
       font-size: .85rem;
+    }
+
+    .prosjektbilder {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .prosjektbilder img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      border: 1px solid var(--kant);
+      border-radius: 12px;
+      object-fit: cover;
     }
 
     footer {
@@ -189,7 +215,13 @@
         flex-direction: column;
       }
 
-      .hero { padding: 75px 0; }
+      .hero {
+        padding: 75px 0;
+      }
+
+      .prosjektbilder img {
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -197,7 +229,8 @@
 <body>
   <header>
     <nav class="container" aria-label="Hovedmeny">
-      <a class="logo" href="#">Ditt Navn.</a> <!-- BYTT UT -->
+      <a class="logo" href="#">Henry Chen.</a>
+
       <div class="nav-lenker">
         <a href="#om">Om meg</a>
         <a href="#prosjekter">Prosjekter</a>
@@ -209,81 +242,84 @@
   <main>
     <div class="container">
       <section class="hero">
-        <div class="eyebrow">Hei, jeg heter Ditt Navn 👋</div> <!-- BYTT UT -->
-        <h1>Jeg lager ting for nettet.</h1> <!-- BYTT UT -->
+        <div class="eyebrow">Hei, jeg heter Henry Chen 👋</div>
+
+        <h1>På vei til å bli Tony Stark. Foreløpig bygger jeg kraner.</h1>
+
         <p>
-          Jeg er en nysgjerrig utvikler som liker å bygge enkle, nyttige og
-          gjennomtenkte digitale løsninger. Her finner du litt om meg og det jeg jobber med.
-        </p> <!-- BYTT UT -->
+          Jeg er en ingeniørspire med bakgrunn i materialvitenskap og erfaring
+          fra forskning og utvikling. Nå studerer jeg maskiningeniørfag og
+          sikter meg inn mot mekatronikk.
+        </p>
+
         <div class="knapper">
-          <a class="knapp" href="#prosjekter">Se prosjektene mine</a>
-          <a class="knapp sekundaer" href="https://github.com/DITT-BRUKERNAVN">
+          <a class="knapp" href="#prosjekter">Se prosjektet mitt</a>
+          <a class="knapp sekundaer" href="https://github.com/henlyy6">
             Min GitHub
-          </a> <!-- BYTT UT: GitHub-brukernavn -->
+          </a>
         </div>
       </section>
 
       <section id="om">
-        <h2>Om meg</h2>
+        <h2>Litt om meg</h2>
+
         <p class="intro">
-          Jeg heter Ditt Navn og er interessert i teknologi, design og problemløsning.
-          Akkurat nå lærer jeg mer om HTML, CSS og JavaScript. På fritiden liker jeg
-          å utforske nye ideer og gjøre dem til små prosjekter.
-        </p> <!-- BYTT UT -->
+          Jeg heter Henry Chen, er 28 år og kommer fra Bærum. Jeg har en
+          mastergrad i materialvitenskap for energi- og nanoteknologi fra
+          Universitetet i Oslo, og tre års arbeidserfaring, hovedsakelig
+          innen forskning og utvikling (R&amp;D). Nå tar jeg en bachelorgrad
+          i maskiningeniørfag ved OsloMet, med planer om å spesialisere meg
+          i mekatronikk.
+        </p>
       </section>
 
       <section id="prosjekter">
         <h2>Prosjekter</h2>
-        <p class="intro">Noe av det jeg har laget eller jobber med.</p>
+        <p class="intro">Et utvalg av det jeg har jobbet med.</p>
 
-        <div class="grid">
-          <article class="kort">
-            <h3>Prosjekt én</h3> <!-- BYTT UT -->
-            <p>En kort beskrivelse av hva prosjektet gjør, og hvorfor du laget det.</p>
-            <div class="tagger">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-            </div>
-            <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-EN">Se prosjektet →</a>
-            <!-- BYTT UT: lenke -->
-          </article>
+        <article class="kort">
+          <h3>Kranprosjekt</h3>
 
-          <article class="kort">
-            <h3>Prosjekt to</h3> <!-- BYTT UT -->
-            <p>Fortell hva du lærte, eller hvilket problem dette prosjektet løser.</p>
-            <div class="tagger">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Design</span>
-            </div>
-            <a href="https://github.com/DITT-BRUKERNAVN/PROSJEKT-TO">Se prosjektet →</a>
-            <!-- BYTT UT: lenke -->
-          </article>
+          <p>
+            Oppgaven var å bygge en kran som kunne løfte en last på 5 kg
+            minst 2 cm ved hjelp av en inngangskraft på 6 N. Konstruksjonen
+            måtte holde seg innenfor 40 × 40 × 50 cm, samtidig som totalvekten
+            skulle være så lav som mulig.
+          </p>
 
-          <article class="kort">
-            <h3>Denne porteføljen</h3>
-            <p>En enkel, responsiv nettside laget for å vise frem hvem jeg er og hva jeg lager.</p>
-            <div class="tagger">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-            </div>
-            <a href="https://github.com/DITT-BRUKERNAVN/DITT-REPO">
-              Se koden →
-            </a> <!-- BYTT UT: lenke -->
-          </article>
-        </div>
+          <div class="tagger" aria-label="Temaer">
+            <span class="tag">Konstruksjon</span>
+            <span class="tag">Mekanikk</span>
+            <span class="tag">Problemløsning</span>
+          </div>
+
+          <!--
+            Legg bildene i en mappe som heter "bilder" ved siden av HTML-filen.
+            Gi dem navnene "kran-1.jpg" og "kran-2.jpg", eller endre filnavnene under.
+            Slett bildelinjene hvis du ikke vil legge til bilder ennå.
+          -->
+          <div class="prosjektbilder">
+            <img src="bilder/kran-1.jpg" alt="Oversiktsbilde av kranen fra Kranprosjektet">
+            <img src="bilder/kran-2.jpg" alt="Detaljbilde av kranens konstruksjon">
+          </div>
+        </article>
       </section>
 
       <section id="kontakt">
         <h2>Ta kontakt</h2>
-        <p class="intro">Har du et spørsmål eller en idé? Send meg gjerne en e-post.</p>
-        <a class="knapp" href="mailto:din.epost@eksempel.no">Send e-post</a>
-        <!-- BYTT UT: e-postadresse -->
+
+        <p class="intro">
+          Har du et spørsmål, en idé eller lyst til å slå av en prat?
+          Send meg gjerne en e-post.
+        </p>
+
+        <a class="knapp" href="mailto:henrychens@outlook.com">Send e-post</a>
       </section>
     </div>
   </main>
 
   <footer>
-    <div class="container">© 2026 Ditt Navn. Laget med HTML og CSS.</div> <!-- BYTT UT -->
+    <div class="container">© 2026 Henry Chen.</div>
   </footer>
 </body>
 </html>
