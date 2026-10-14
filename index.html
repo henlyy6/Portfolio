@@ -6,7 +6,7 @@
        ================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag og prosjekter.">
+  <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag, ferdigheter og prosjekter.">
   <title>Henry Chen | Portefølje</title>
 
   <style>
@@ -174,7 +174,7 @@
     }
 
     /* ==================================================
-       PROSJEKTKORT
+       KORT – BRUKES TIL FERDIGHETER OG PROSJEKTER
        ================================================== */
     .kort {
       max-width: 850px;
@@ -194,7 +194,41 @@
       color: var(--dempet);
     }
 
-    /* Små merkelapper under prosjektbeskrivelsen */
+    /* ==================================================
+       FERDIGHETER
+       Tre kort ved siden av hverandre på store skjermer.
+       De legger seg under hverandre på smale skjermer.
+       ================================================== */
+    .ferdigheter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .ferdigheter-grid .kort {
+      max-width: none;
+      margin-top: 0;
+    }
+
+    .ferdighet-gruppe {
+      margin-top: 20px;
+    }
+
+    .ferdighet-gruppe h4 {
+      margin: 0 0 4px;
+      color: var(--aksent);
+      font-size: 1rem;
+    }
+
+    .ferdighet-gruppe p {
+      margin: 0;
+      font-size: .95rem;
+    }
+
+    /* ==================================================
+       MERKELAPPER OG PROSJEKTBILDER
+       ================================================== */
     .tagger {
       display: flex;
       flex-wrap: wrap;
@@ -210,7 +244,6 @@
       font-size: .85rem;
     }
 
-    /* Bilder i prosjektkortene */
     .prosjektbilder {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -239,7 +272,7 @@
     }
 
     /* ==================================================
-       TILPASNING FOR SMÅ SKJERMER / MOBIL
+       MOBIL
        ================================================== */
     @media (max-width: 600px) {
       nav {
@@ -268,6 +301,7 @@
 
       <div class="nav-lenker">
         <a href="#om">Om meg</a>
+        <a href="#ferdigheter">Ferdigheter</a>
         <a href="#prosjekter">Prosjekter</a>
         <a href="#kontakt">Kontakt</a>
       </div>
@@ -281,9 +315,9 @@
            INTRODUKSJON / ØVERSTE DEL
            ================================================== -->
       <section class="hero">
-        <div class="eyebrow">Hei, jeg heter Henry 👋</div>
+        <div class="eyebrow">Hei, jeg heter Henry Chen 👋</div>
 
-        <h1>Fra atomer til automasjon. Fortsatt under konstruksjon.</h1>
+        <h1>På vei til å bli Tony Stark. Foreløpig bygger jeg kraner.</h1>
 
         <p>
           Jeg er en ingeniørspire med bakgrunn i materialvitenskap og erfaring
@@ -322,8 +356,77 @@
       </section>
 
       <!-- ==================================================
+           FERDIGHETER
+           Legg til eller fjern metoder i gruppene under.
+           ================================================== -->
+      <section id="ferdigheter">
+        <h2>Ferdigheter</h2>
+        <p class="intro">
+          Metoder og verktøy jeg har arbeidet med innen materialvitenskap,
+          beregning, design og produksjon.
+        </p>
+
+        <div class="ferdigheter-grid">
+          <!-- KORT 1: MATERIALVITENSKAP -->
+          <article class="kort">
+            <h3>Materialvitenskap</h3>
+
+            <div class="ferdighet-gruppe">
+              <h4>Elektrokjemi</h4>
+              <p>EIS (elektrokjemisk impedansspektroskopi), EMF (elektromotorisk spenning) og CV (syklisk voltammetri).</p>
+            </div>
+
+            <div class="ferdighet-gruppe">
+              <h4>Materialkarakterisering</h4>
+              <p>SEM (skanningelektronmikroskopi), XRD (røntgendiffraksjon), termogravimetri og dilatometri.</p>
+            </div>
+
+            <div class="ferdighet-gruppe">
+              <h4>Uorganisk syntese</h4>
+              <p>APCVD (kjemisk dampavsetning ved atmosfærisk trykk) og SSRS (reaktiv sintring i fast fase).</p>
+            </div>
+          </article>
+
+          <!-- KORT 2: BEREGNING OG DATA -->
+          <article class="kort">
+            <h3>Beregning og data</h3>
+
+            <div class="ferdighet-gruppe">
+              <h4>CFD (strømningssimulering)</h4>
+              <p>SimScale, OpenFOAM og FreeCAD.</p>
+            </div>
+
+            <div class="ferdighet-gruppe">
+              <h4>Forsøksdesign (DoE)</h4>
+              <p>MODDE.</p>
+            </div>
+
+            <div class="ferdighet-gruppe">
+              <h4>Databehandling og utforskende dataanalyse</h4>
+              <p>Python.</p>
+            </div>
+          </article>
+
+          <!-- KORT 3: DESIGN OG PRODUKSJON -->
+          <article class="kort">
+            <h3>Design og produksjon</h3>
+
+            <div class="ferdighet-gruppe">
+              <h4>CAD (datamaskinassistert konstruksjon)</h4>
+              <p>Onshape og FreeCAD.</p>
+            </div>
+
+            <div class="ferdighet-gruppe">
+              <h4>3D-printing</h4>
+              <p>Bambu Lab P1S med AMS.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================================================
            PROSJEKTER
-           Legg til nye prosjekter som egne <article>-blokker her.
+           Legg til nye prosjekter som egne <article>-blokker.
            ================================================== -->
       <section id="prosjekter">
         <h2>Prosjekter</h2>
@@ -366,7 +469,7 @@
             Les masteroppgaven →
           </a>
 
-          <!-- Last opp master-1.jpg og master-2.jpg ved siden av index.html -->
+          <!-- Bildefilene må ligge ved siden av index.html -->
           <div class="prosjektbilder">
             <img src="master-1.jpg" alt="Bilde fra masteroppgaven i Elektrokjemigruppen ved UiO">
             <img src="master-2.jpg" alt="Et annet bilde fra masteroppgaven">
