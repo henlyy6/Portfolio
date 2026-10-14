@@ -1,15 +1,17 @@
-Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, slik at du kan kopiere alt på én gang.
+Beklager! Her er **hele filen samlet igjen**, med `#`-merkede kommentarer for navigering. Den fortsetter helt til `</html>`.
 
 ```html
 <!DOCTYPE html>
 <html lang="no">
 <head>
+  <!-- # 01 — INFORMASJON OM NETTSIDEN -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag, ferdigheter og prosjekter.">
   <title>Henry Chen | Portefølje</title>
 
   <style>
+    /* # 02 — FARGER */
     :root {
       --bakgrunn: #0b1020;
       --kort: #151d32;
@@ -19,6 +21,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       --kant: #2a3650;
     }
 
+    /* # 03 — GRUNNLEGGENDE STIL */
     * {
       box-sizing: border-box;
     }
@@ -48,7 +51,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       margin: 0 auto;
     }
 
-    /* Toppmeny */
+    /* # 04 — TOPPMENY */
     header {
       position: sticky;
       top: 0;
@@ -87,7 +90,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       color: #fff;
     }
 
-    /* Introduksjon */
+    /* # 05 — INTRODUKSJON */
     .hero {
       padding: 80px 0 70px;
     }
@@ -114,7 +117,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       font-size: 1.15rem;
     }
 
-    /* Knapper */
+    /* # 06 — KNAPPER */
     .knapper {
       display: flex;
       flex-wrap: wrap;
@@ -148,7 +151,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       color: #fff;
     }
 
-    /* Seksjoner og tekst */
+    /* # 07 — SEKSJONER OG TEKST */
     section {
       padding: 52px 0;
       scroll-margin-top: 90px;
@@ -164,7 +167,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       color: var(--dempet);
     }
 
-    /* Kort */
+    /* # 08 — KORT */
     .kort {
       max-width: 850px;
       margin-top: 22px;
@@ -187,7 +190,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       margin-top: 24px;
     }
 
-    /* Ferdigheter */
+    /* # 09 — FERDIGHETER */
     .ferdigheter-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -222,7 +225,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       margin-bottom: 4px;
     }
 
-    /* Merkelapper, bilder og prosjektlenker */
+    /* # 10 — MERKELAPPER, BILDER OG PROSJEKTLENKER */
     .tagger {
       display: flex;
       flex-wrap: wrap;
@@ -262,7 +265,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       margin-top: 22px;
     }
 
-    /* Bunntekst */
+    /* # 11 — BUNNTEKST */
     footer {
       margin-top: 40px;
       padding: 28px 0;
@@ -271,7 +274,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
       font-size: .9rem;
     }
 
-    /* Mobil */
+    /* # 12 — MOBIL */
     @media (max-width: 600px) {
       nav {
         align-items: flex-start;
@@ -295,6 +298,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
 </head>
 
 <body>
+  <!-- # 13 — TOPPMENY -->
   <header>
     <nav class="container" aria-label="Hovedmeny">
       <a class="logo" href="#">Henry Chen.</a>
@@ -310,6 +314,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
 
   <main>
     <div class="container">
+      <!-- # 14 — INTRODUKSJON -->
       <section class="hero">
         <div class="eyebrow">Hei, jeg heter Henry 👋</div>
 
@@ -335,6 +340,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
         </div>
       </section>
 
+      <!-- # 15 — OM MEG -->
       <section id="om">
         <h2>Litt om meg</h2>
 
@@ -348,6 +354,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
         </p>
       </section>
 
+      <!-- # 16 — FERDIGHETER -->
       <section id="ferdigheter">
         <h2>Ferdigheter</h2>
         <p class="intro">
@@ -356,6 +363,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
         </p>
 
         <div class="ferdigheter-grid">
+          <!-- # 16.1 — MATERIALVITENSKAP -->
           <article class="kort">
             <h3>Materialvitenskap</h3>
 
@@ -387,6 +395,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
             </div>
           </article>
 
+          <!-- # 16.2 — BEREGNING OG DATA -->
           <article class="kort">
             <h3>Beregning og data</h3>
 
@@ -414,6 +423,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
             </div>
           </article>
 
+          <!-- # 16.3 — DESIGN OG PRODUKSJON -->
           <article class="kort">
             <h3>Design og produksjon</h3>
 
@@ -435,10 +445,12 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
         </div>
       </section>
 
+      <!-- # 17 — PROSJEKTER -->
       <section id="prosjekter">
         <h2>Prosjekter</h2>
         <p class="intro">Et utvalg av det jeg har jobbet med.</p>
 
+        <!-- # 17.1 — MASTEROPPGAVE -->
         <article class="kort">
           <h3>Masteroppgave – Elektrokjemigruppen UiO</h3>
 
@@ -469,6 +481,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
           </div>
         </article>
 
+        <!-- # 17.2 — KRANPROSJEKT -->
         <article class="kort">
           <h3>Kranprosjekt</h3>
 
@@ -491,6 +504,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
           </div>
         </article>
 
+        <!-- # 17.3 — STØVSUGERPROSJEKT -->
         <article class="kort">
           <h3>Støvsugerprosjekt</h3>
 
@@ -516,9 +530,7 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
         </article>
       </section>
 
-      <!-- ==================================================
-           KONTAKT
-           ================================================== -->
+      <!-- # 18 — KONTAKT -->
       <section id="kontakt">
         <h2>Ta kontakt</h2>
 
@@ -532,11 +544,10 @@ Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, 
     </div>
   </main>
 
-  <!-- ==================================================
-       BUNNTEKST
-       ================================================== -->
+  <!-- # 19 — BUNNTEKST -->
   <footer>
     <div class="container">© 2026 Henry Chen.</div>
   </footer>
 </body>
 </html>
+```
