@@ -1,18 +1,15 @@
+Beklager – her er **hele filen samlet**, fra `<!DOCTYPE html>` til `</html>`, slik at du kan kopiere alt på én gang.
+
+```html
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <!-- ==================================================
-       INFORMASJON OM NETTSIDEN
-       ================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag, ferdigheter og prosjekter.">
   <title>Henry Chen | Portefølje</title>
 
   <style>
-    /* ==================================================
-       FARGER
-       ================================================== */
     :root {
       --bakgrunn: #0b1020;
       --kort: #151d32;
@@ -22,9 +19,6 @@
       --kant: #2a3650;
     }
 
-    /* ==================================================
-       GRUNNLEGGENDE STIL
-       ================================================== */
     * {
       box-sizing: border-box;
     }
@@ -54,9 +48,7 @@
       margin: 0 auto;
     }
 
-    /* ==================================================
-       TOPPMENY
-       ================================================== */
+    /* Toppmeny */
     header {
       position: sticky;
       top: 0;
@@ -95,9 +87,7 @@
       color: #fff;
     }
 
-    /* ==================================================
-       ØVERSTE DEL / INTRODUKSJON
-       ================================================== */
+    /* Introduksjon */
     .hero {
       padding: 80px 0 70px;
     }
@@ -124,9 +114,7 @@
       font-size: 1.15rem;
     }
 
-    /* ==================================================
-       KNAPPER
-       ================================================== */
+    /* Knapper */
     .knapper {
       display: flex;
       flex-wrap: wrap;
@@ -160,9 +148,7 @@
       color: #fff;
     }
 
-    /* ==================================================
-       SEKSJONER OG TEKST
-       ================================================== */
+    /* Seksjoner og tekst */
     section {
       padding: 52px 0;
       scroll-margin-top: 90px;
@@ -178,9 +164,7 @@
       color: var(--dempet);
     }
 
-    /* ==================================================
-       KORT – BRUKES TIL FERDIGHETER OG PROSJEKTER
-       ================================================== */
+    /* Kort */
     .kort {
       max-width: 850px;
       margin-top: 22px;
@@ -199,14 +183,11 @@
       color: var(--dempet);
     }
 
-    /* Jevn avstand mellom prosjektkortene */
     #prosjekter > .kort + .kort {
       margin-top: 24px;
     }
 
-    /* ==================================================
-       FERDIGHETER – LISTER UTEN PUNKTMERKER
-       ================================================== */
+    /* Ferdigheter */
     .ferdigheter-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -241,9 +222,7 @@
       margin-bottom: 4px;
     }
 
-    /* ==================================================
-       MERKELAPPER, PROSJEKTBILDER OG LENKER
-       ================================================== */
+    /* Merkelapper, bilder og prosjektlenker */
     .tagger {
       display: flex;
       flex-wrap: wrap;
@@ -266,7 +245,6 @@
       margin-top: 24px;
     }
 
-    /* Like store bildeflater uten å beskjære bildene */
     .prosjektbilder img {
       display: block;
       width: 100%;
@@ -284,9 +262,7 @@
       margin-top: 22px;
     }
 
-    /* ==================================================
-       BUNNTEKST
-       ================================================== */
+    /* Bunntekst */
     footer {
       margin-top: 40px;
       padding: 28px 0;
@@ -295,9 +271,7 @@
       font-size: .9rem;
     }
 
-    /* ==================================================
-       MOBIL
-       ================================================== */
+    /* Mobil */
     @media (max-width: 600px) {
       nav {
         align-items: flex-start;
@@ -321,9 +295,6 @@
 </head>
 
 <body>
-  <!-- ==================================================
-       TOPPMENY
-       ================================================== -->
   <header>
     <nav class="container" aria-label="Hovedmeny">
       <a class="logo" href="#">Henry Chen.</a>
@@ -339,10 +310,6 @@
 
   <main>
     <div class="container">
-
-      <!-- ==================================================
-           INTRODUKSJON / ØVERSTE DEL
-           ================================================== -->
       <section class="hero">
         <div class="eyebrow">Hei, jeg heter Henry 👋</div>
 
@@ -368,9 +335,6 @@
         </div>
       </section>
 
-      <!-- ==================================================
-           OM MEG
-           ================================================== -->
       <section id="om">
         <h2>Litt om meg</h2>
 
@@ -384,9 +348,6 @@
         </p>
       </section>
 
-      <!-- ==================================================
-           FERDIGHETER
-           ================================================== -->
       <section id="ferdigheter">
         <h2>Ferdigheter</h2>
         <p class="intro">
@@ -395,7 +356,6 @@
         </p>
 
         <div class="ferdigheter-grid">
-          <!-- KORT 1: MATERIALVITENSKAP -->
           <article class="kort">
             <h3>Materialvitenskap</h3>
 
@@ -427,7 +387,6 @@
             </div>
           </article>
 
-          <!-- KORT 2: BEREGNING OG DATA -->
           <article class="kort">
             <h3>Beregning og data</h3>
 
@@ -455,7 +414,6 @@
             </div>
           </article>
 
-          <!-- KORT 3: DESIGN OG PRODUKSJON -->
           <article class="kort">
             <h3>Design og produksjon</h3>
 
@@ -477,14 +435,10 @@
         </div>
       </section>
 
-      <!-- ==================================================
-           PROSJEKTER
-           ================================================== -->
       <section id="prosjekter">
         <h2>Prosjekter</h2>
         <p class="intro">Et utvalg av det jeg har jobbet med.</p>
 
-        <!-- PROSJEKT 1: MASTEROPPGAVE -->
         <article class="kort">
           <h3>Masteroppgave – Elektrokjemigruppen UiO</h3>
 
@@ -515,7 +469,6 @@
           </div>
         </article>
 
-        <!-- PROSJEKT 2: KRANPROSJEKT -->
         <article class="kort">
           <h3>Kranprosjekt</h3>
 
@@ -530,4 +483,52 @@
             <span class="tag">Konstruksjon</span>
             <span class="tag">Mekanikk</span>
             <span class="tag">Problemløsning</span>
-          </
+          </div>
+
+          <div class="prosjektbilder">
+            <img src="kran-1.jpg" alt="Oversiktsbilde av kranen fra Kranprosjektet">
+            <img src="kran-2.jpg" alt="Detaljbilde av kranens konstruksjon">
+          </div>
+        </article>
+
+        <article class="kort">
+          <h3>Støvsugerprosjekt</h3>
+
+          <p>
+            Utarbeidet et produksjonsklart designunderlag for en støvsuger.
+            Brukte prinsipper for produksjonsvennlig design (DFM) for å gjøre
+            produksjon og modulær montering enklere. Valgte motor og
+            standardkomponenter ut fra krav til sugeevne, luftstrøm og kostnad.
+            Vurderte mulige feilmoduser med DFMEA og tok hensyn til relevante
+            prinsipper for kvalitetsstyring i ISO 9001.
+          </p>
+
+          <div class="tagger" aria-label="Temaer">
+            <span class="tag">Produktdesign</span>
+            <span class="tag">DFM</span>
+            <span class="tag">DFMEA</span>
+          </div>
+
+          <div class="prosjektbilder">
+            <img src="stovsuger-1.jpg" alt="Oversiktsbilde av designet for støvsugeren">
+            <img src="stovsuger-2.jpg" alt="Detaljbilde fra støvsugerprosjektet">
+          </div>
+        </article>
+      </section>
+
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p class="intro">
+          Vil du ta kontakt? Send meg gjerne en melding på
+          <a href="https://www.linkedin.com/in/hc6/?isSelfProfile=true">LinkedIn</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© Henry Chen</div>
+  </footer>
+</body>
+</html>
+```
