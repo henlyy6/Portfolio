@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+  <!-- ==================================================
+       GRUNNLEGGENDE INFORMASJON OM NETTSIDEN
+       ================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag og prosjekter.">
   <title>Henry Chen | Portefølje</title>
 
   <style>
+    /* ==================================================
+       FARGER
+       ================================================== */
     :root {
       --bakgrunn: #0b1020;
       --kort: #151d32;
@@ -16,6 +22,9 @@
       --kant: #2a3650;
     }
 
+    /* ==================================================
+       GRUNNLEGGENDE STIL
+       ================================================== */
     * {
       box-sizing: border-box;
     }
@@ -45,6 +54,9 @@
       margin: 0 auto;
     }
 
+    /* ==================================================
+       TOPPMENY
+       ================================================== */
     header {
       border-bottom: 1px solid var(--kant);
     }
@@ -79,6 +91,9 @@
       color: #fff;
     }
 
+    /* ==================================================
+       ØVERSTE DEL / INTRODUKSJON
+       ================================================== */
     .hero {
       padding: 110px 0 100px;
     }
@@ -105,6 +120,9 @@
       font-size: 1.15rem;
     }
 
+    /* ==================================================
+       KNAPPER
+       ================================================== */
     .knapper {
       display: flex;
       flex-wrap: wrap;
@@ -138,6 +156,9 @@
       color: #fff;
     }
 
+    /* ==================================================
+       SEKSJONER OG TEKST
+       ================================================== */
     section {
       padding: 65px 0;
     }
@@ -152,6 +173,9 @@
       color: var(--dempet);
     }
 
+    /* ==================================================
+       PROSJEKTKORT
+       ================================================== */
     .kort {
       max-width: 850px;
       margin-top: 28px;
@@ -170,6 +194,7 @@
       color: var(--dempet);
     }
 
+    /* Små merkelapper under prosjektbeskrivelsen */
     .tagger {
       display: flex;
       flex-wrap: wrap;
@@ -185,6 +210,7 @@
       font-size: .85rem;
     }
 
+    /* Bilder i prosjektkortene */
     .prosjektbilder {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -201,6 +227,9 @@
       object-fit: cover;
     }
 
+    /* ==================================================
+       BUNNTEKST
+       ================================================== */
     footer {
       margin-top: 40px;
       padding: 28px 0;
@@ -209,6 +238,9 @@
       font-size: .9rem;
     }
 
+    /* ==================================================
+       TILPASNING FOR SMÅ SKJERMER / MOBIL
+       ================================================== */
     @media (max-width: 600px) {
       nav {
         align-items: flex-start;
@@ -227,6 +259,9 @@
 </head>
 
 <body>
+  <!-- ==================================================
+       TOPPMENY
+       ================================================== -->
   <header>
     <nav class="container" aria-label="Hovedmeny">
       <a class="logo" href="#">Henry Chen.</a>
@@ -241,6 +276,10 @@
 
   <main>
     <div class="container">
+
+      <!-- ==================================================
+           INTRODUKSJON / ØVERSTE DEL
+           ================================================== -->
       <section class="hero">
         <div class="eyebrow">Hei, jeg heter Henry Chen 👋</div>
 
@@ -253,8 +292,9 @@
         </p>
 
         <div class="knapper">
-          <a class="knapp" href="#prosjekter">Se prosjektet mitt</a>
+          <a class="knapp" href="#prosjekter">Se prosjektene mine</a>
 
+          <!-- PDF-en må ligge ved siden av index.html og hete Henry_Chen_CV.pdf -->
           <a class="knapp sekundaer" href="Henry_Chen_CV.pdf" download="Henry_Chen_CV.pdf">
             Last ned CV
           </a>
@@ -265,6 +305,9 @@
         </div>
       </section>
 
+      <!-- ==================================================
+           OM MEG
+           ================================================== -->
       <section id="om">
         <h2>Litt om meg</h2>
 
@@ -278,10 +321,15 @@
         </p>
       </section>
 
+      <!-- ==================================================
+           PROSJEKTER
+           Legg til nye prosjekter som egne <article>-blokker her.
+           ================================================== -->
       <section id="prosjekter">
         <h2>Prosjekter</h2>
         <p class="intro">Et utvalg av det jeg har jobbet med.</p>
 
+        <!-- PROSJEKT 1: KRANPROSJEKT -->
         <article class="kort">
           <h3>Kranprosjekt</h3>
 
@@ -298,12 +346,14 @@
             <span class="tag">Problemløsning</span>
           </div>
 
+          <!-- Bildefilene må ligge ved siden av index.html -->
           <div class="prosjektbilder">
             <img src="kran-1.jpg" alt="Oversiktsbilde av kranen fra Kranprosjektet">
             <img src="kran-2.jpg" alt="Detaljbilde av kranens konstruksjon">
           </div>
         </article>
 
+        <!-- PROSJEKT 2: MASTEROPPGAVE -->
         <article class="kort">
           <h3>Masteroppgave – Elektrokjemigruppen UiO</h3>
 
@@ -315,9 +365,18 @@
           <a href="https://nva.sikt.no/registration/0198cc8d4ff1-b7263c96-d4c1-4e66-bd8b-b4d188563348">
             Les masteroppgaven →
           </a>
+
+          <!-- Last opp master-1.jpg og master-2.jpg ved siden av index.html -->
+          <div class="prosjektbilder">
+            <img src="master-1.jpg" alt="Bilde fra masteroppgaven i Elektrokjemigruppen ved UiO">
+            <img src="master-2.jpg" alt="Et annet bilde fra masteroppgaven">
+          </div>
         </article>
       </section>
 
+      <!-- ==================================================
+           KONTAKT
+           ================================================== -->
       <section id="kontakt">
         <h2>Ta kontakt</h2>
 
@@ -331,6 +390,9 @@
     </div>
   </main>
 
+  <!-- ==================================================
+       BUNNTEKST
+       ================================================== -->
   <footer>
     <div class="container">© 2026 Henry Chen.</div>
   </footer>
