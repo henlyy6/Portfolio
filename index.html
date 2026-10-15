@@ -98,6 +98,48 @@
     /* ==================================================
        ØVERSTE DEL / INTRODUKSJON
        ================================================== */
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+    
+    .hero-tekst {
+      flex: 1;
+    }
+    
+    .headshot {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--aksent);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+    
+    @media (max-width: 800px) {
+      .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+    
+      .headshot {
+        width: 220px;
+        height: 220px;
+      }
+    
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .knapper {
+        justify-content: center;
+      }
+    }
+    
     .hero {
       padding: 110px 0 100px;
     }
