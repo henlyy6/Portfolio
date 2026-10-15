@@ -548,28 +548,35 @@
           </div>
         </article>
 
-        <!-- PROSJEKT3: RADONPREDIKSJON MED MASKINLÆRING -->
+        <!-- PROSJEKT: RADONPREDIKSJON MED MASKINLÆRING -->
         <article class="kort">
           <h3>Radonprediksjon med maskinlæring</h3>
         
           <p>
             Prosjektet undersøkte om innendørs radonkonsentrasjon kunne
             predikeres fra miljøsensorer som målte CO₂, temperatur,
-            luftfuktighet, VOC, trykk og partikkelnivåer. Datasettene ble
-            renset og behandlet i Python før en XGBoost-modell ble trent og
-            evaluert.
+            luftfuktighet, VOC, trykk og partikkelnivåer. Datasettet ble
+            behandlet i Python ved hjelp av datarensing, interpolering av
+            manglende verdier og utforskende dataanalyse (EDA).
           </p>
         
           <div class="tagger" aria-label="Temaer">
             <span class="tag">Python</span>
-            <span class="tag">Dataanalyse</span>
             <span class="tag">Maskinlæring</span>
+            <span class="tag">Dataanalyse</span>
           </div>
         
           <p>
-            Modellen oppnådde en R²-score på 0,915 og ble analysert videre med
-            SHAP for å identifisere hvilke variabler som hadde størst innvirkning
-            på prediksjonene.
+            En XGBoost-modell ble trent til å predikere radonnivåer fra
+            sensordata og oppnådde en R²-score på 0,915. Modellen ble videre
+            analysert med SHAP for å undersøke hvilke variabler som bidro mest
+            til prediksjonene.
+          </p>
+        
+          <p class="prosjektlenke">
+            <a href="https://github.com/henlyy6/Radon-Predictive-Modeling" target="_blank" rel="noopener noreferrer">
+              Se prosjektet på GitHub →
+            </a>
           </p>
         
           <div class="prosjektbilder">
