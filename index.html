@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
   <!-- ==================================================
        INFORMASJON OM NETTSIDEN
@@ -7,6 +7,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Porteføljen til Henry Chen – materialvitenskap, maskiningeniørfag, ferdigheter og prosjekter.">
+  <meta property="og:title" content="Henry Chen | Portefølje">
+  <meta property="og:description" content="Materialvitenskap, maskiningeniørfag, ferdigheter og prosjekter.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b1020">
   <title>Henry Chen | Portefølje</title>
 
   <style>
@@ -49,13 +53,39 @@
       color: #fff;
     }
 
+    /* Synlig fokusmarkering for tastaturnavigasjon */
+    :focus-visible {
+      outline: 2px solid var(--aksent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Hopp-til-innhold-lenke for tastatur og skjermlesere */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 200;
+      padding: 10px 16px;
+      background: var(--aksent);
+      color: #09231d;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      left: 16px;
+      top: 16px;
+    }
+
     .container {
       width: min(1000px, calc(100% - 40px));
       margin: 0 auto;
     }
 
     /* ==================================================
-       TOPPMENY – BLIR SYNLIG NÅR DU BLAR
+       TOPPMENY
        ================================================== */
     header {
       position: sticky;
@@ -74,13 +104,14 @@
     }
 
     .logo {
-      /*
-      color: var(--tekst);
-      */
       color: var(--dempet);
       font-size: 1.2rem;
       font-weight: 800;
       text-decoration: none;
+    }
+
+    .logo:hover {
+      color: #fff;
     }
 
     .nav-lenker {
@@ -99,8 +130,12 @@
     }
 
     /* ==================================================
-       ØVERSTE DEL / INTRODUKSJON
+       INTRODUKSJON
        ================================================== */
+    .hero {
+      padding: 80px 0 20px;
+    }
+
     .hero-content {
       display: flex;
       align-items: center;
@@ -110,49 +145,6 @@
 
     .hero-tekst {
       flex: 1;
-    }
-
-    .headshot {
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--aksent);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 800px) {
-      .hero-content {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-
-      .headshot {
-        width: 220px;
-        height: 220px;
-      }
-
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .knapper {
-        justify-content: center;
-      }
-    }
-
-    .hero {
-      padding: 70px 0 10px;
-      padding: 80px 0 20px;
-    }
-
-    .hero-subtitle {
-    font-size: 1.50rem;
-    color: #c9c9c9;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
     }
 
     .eyebrow {
@@ -175,6 +167,23 @@
       max-width: 680px;
       color: var(--dempet);
       font-size: 1.15rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: #c9c9c9;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .headshot {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--aksent);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
     }
 
     /* ==================================================
@@ -239,7 +248,7 @@
     }
 
     /* ==================================================
-       KORT – BRUKES TIL FERDIGHETER OG PROSJEKTER
+       KORT – FERDIGHETER OG PROSJEKTER
        ================================================== */
     .kort {
       max-width: 850px;
@@ -260,7 +269,7 @@
     }
 
     /* ==================================================
-       FERDIGHETER – PUNKTLISTER
+       FERDIGHETER
        ================================================== */
     .ferdigheter-grid {
       display: grid;
@@ -297,7 +306,7 @@
     }
 
     /* ==================================================
-       MERKELAPPER OG PROSJEKTBILDER
+       MERKELAPPER, LENKER OG PROSJEKTBILDER
        ================================================== */
     .tagger {
       display: flex;
@@ -312,6 +321,16 @@
       border-radius: 999px;
       color: var(--dempet);
       font-size: .85rem;
+    }
+
+    .prosjektlenker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+    }
+
+    .prosjektlenke {
+      margin: 0;
     }
 
     .prosjektbilder {
@@ -346,6 +365,31 @@
     /* ==================================================
        MOBIL
        ================================================== */
+    @media (max-width: 800px) {
+      .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .headshot {
+        width: 220px;
+        height: 220px;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .knapper {
+        justify-content: center;
+      }
+
+      .prosjektlenker {
+        justify-content: center;
+      }
+    }
+
     @media (max-width: 600px) {
       nav {
         align-items: flex-start;
@@ -353,23 +397,38 @@
       }
 
       .hero {
-        padding: 75px 0;
+        padding: 75px 0 20px;
       }
 
       section {
         scroll-margin-top: 140px;
+      }
+
+      .prosjektbilder img {
+        height: 240px;
+      }
+    }
+
+    /* ==================================================
+       REDUSERT BEVEGELSE
+       ================================================== */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#hovedinnhold">Hopp til innhold</a>
+
   <!-- ==================================================
        TOPPMENY
        ================================================== -->
   <header>
     <nav class="container" aria-label="Hovedmeny">
-      <a class="logo" href="#">Forside</a>
+      <a class="logo" href="#">Henry Chen</a>
 
       <div class="nav-lenker">
         <a href="#om">Om meg</a>
@@ -380,21 +439,17 @@
     </nav>
   </header>
 
-  <main>
+  <main id="hovedinnhold">
     <div class="container">
 
       <!-- ==================================================
-           INTRODUKSJON / ØVERSTE DEL
+           INTRODUKSJON
            ================================================== -->
       <section class="hero">
         <div class="hero-content">
 
           <div class="hero-tekst">
-            <div class="eyebrow">
-              <!--
-              MATERIAL SCIENTIST → MECHANICAL ENGINEER
-              -->
-            </div>
+            <div class="eyebrow">Materialvitenskap → Maskiningeniør</div>
 
             <h1>Henry Chen</h1>
 
@@ -403,9 +458,7 @@
             </p>
 
             <div class="knapper">
-              <a class="knapp" href="#prosjekter">
-                Se prosjektene mine
-              </a>
+              <a class="knapp" href="#prosjekter">Se prosjektene mine</a>
 
               <a class="knapp sekundaer"
                  href="Henry_Chen_CV.pdf"
@@ -424,23 +477,25 @@
 
           <img
             src="headshot.jpg"
-            alt="Henry Chen"
+            alt="Portrett av Henry Chen"
             class="headshot"
+            width="280"
+            height="280"
           >
 
         </div>
       </section>
 
       <!-- ==================================================
-   OM MEG
-   ================================================== -->
+           OM MEG
+           ================================================== -->
       <section id="om">
         <h2>Litt om meg</h2>
 
         <p>Jeg heter Henry, er 28 år og kommer fra Bærum.</p>
 
         <p>
-          Jeg har en mastergrad i materialvitenskap for energi- og nanoteknologi fra UiO, 
+          Jeg har en mastergrad i materialvitenskap for energi- og nanoteknologi fra UiO,
           samt tre års erfaring innen forskning og utvikling (FoU).
         </p>
 
@@ -460,7 +515,8 @@
         </p>
 
         <div class="ferdigheter-grid">
-          <!-- KORT 1: MATERIALVITENSKAP -->
+
+          <!-- Materialvitenskap -->
           <article class="kort">
             <h3>Materialvitenskap</h3>
 
@@ -478,7 +534,7 @@
               <ul>
                 <li>SEM – skanningelektronmikroskopi</li>
                 <li>XRD – røntgendiffraksjon</li>
-                <li>TGA – Termogravimetri</li>
+                <li>TGA – termogravimetri</li>
                 <li>Dilatometri</li>
               </ul>
             </div>
@@ -492,7 +548,7 @@
             </div>
           </article>
 
-          <!-- KORT 2: BEREGNING OG DATA -->
+          <!-- Simulering og data -->
           <article class="kort">
             <h3>Simulering og data</h3>
 
@@ -509,12 +565,11 @@
               <ul>
                 <li>Prosessoptimalisering og statistisk analyse</li>
                 <li>Prediktiv modellering med MLR og PLS</li>
-
               </ul>
             </div>
 
             <div class="ferdighet-gruppe">
-              <h4>Python-Programmering</h4>
+              <h4>Python-programmering</h4>
               <ul>
                 <li>Objektorientert programmering (OOP)</li>
                 <li>Databehandling og utforskende dataanalyse</li>
@@ -523,7 +578,7 @@
             </div>
           </article>
 
-          <!-- KORT 3: DESIGN OG PRODUKSJON -->
+          <!-- Design og produksjon -->
           <article class="kort">
             <h3>Design og produksjon</h3>
 
@@ -544,13 +599,13 @@
             </div>
 
             <div class="ferdighet-gruppe">
-              <h4>Laser kutting</h4>
+              <h4>Laserskjæring</h4>
               <ul>
                 <li>Epilog laser cutter</li>
               </ul>
             </div>
-
           </article>
+
         </div>
       </section>
 
@@ -561,13 +616,13 @@
         <h2>Prosjekter</h2>
         <p class="intro">Et utvalg av det jeg har jobbet med.</p>
 
-        <!-- PROSJEKT 1: MASTEROPPGAVE -->
+        <!-- Masteroppgave -->
         <article class="kort">
           <h3>Masteroppgave (60 studiepoeng) ved Elektrokjemigruppen, UiO</h3>
 
           <p>
-            Masteroppgaven fokuserte på utvikling og karakterisering av protonledende keramikk for brenselceller. 
-            Denne typen elektrolytter muliggjør drift ved 400–600 °C, betydelig lavere enn konvensjonelle oksidion-ledende brenselceller, 
+            Masteroppgaven fokuserte på utvikling og karakterisering av protonledende keramikk for brenselceller.
+            Denne typen elektrolytter muliggjør drift ved 400–600 °C, betydelig lavere enn konvensjonelle oksidion-ledende brenselceller,
             og kan dermed bidra til lavere materialkostnader og økt levetid.
           </p>
 
@@ -582,36 +637,35 @@
           </div>
 
           <div class="prosjektlenker">
-            <a href="https://nva.sikt.no/registration/0198cc8d4ff1-b7263c96-d4c1-4e66-bd8b-b4d188563348">
+            <a href="https://nva.sikt.no/registration/0198cc8d4ff1-b7263c96-d4c1-4e66-bd8b-b4d188563348"
+               target="_blank" rel="noopener noreferrer">
               Les masteroppgaven →
             </a>
-            <br>
             <a href="master-plakat.jpg" target="_blank" rel="noopener noreferrer">
               Se forskningsplakaten →
             </a>
           </div>
 
-          <!-- De to eksisterende bildene -->
           <div class="prosjektbilder">
-            <img src="master-1.png" alt="Bilde fra masteroppgaven ved Elektrokjemigruppen på UiO">
-            <img src="master-2.png" alt="Et annet bilde fra masteroppgaven">
+            <img src="master-1.png" alt="Bilde fra masteroppgaven ved Elektrokjemigruppen på UiO" loading="lazy">
+            <img src="master-2.png" alt="Ytterligere bilde fra masteroppgaven" loading="lazy">
           </div>
-    </article>
+        </article>
 
-        <!-- PROSJEKT: RADONPREDIKSJON MED MASKINLÆRING -->
+        <!-- Radonprediksjon -->
         <article class="kort">
           <h3>Radonprediksjon med maskinlæring</h3>
 
           <p>
             Prosjektet undersøkte om innendørs radonkonsentrasjon kunne predikeres fra miljøsensorer som målte
-            CO₂, temperatur, luftfuktighet, VOC, trykk og partikkelnivåer. 
+            CO₂, temperatur, luftfuktighet, VOC, trykk og partikkelnivåer.
             Datasettet besto av omtrent 96 000 målinger som ble behandlet og analysert i Python.
           </p>
 
           <p>
-            En XGBoost-modell ble trent til å predikere radonnivåer fra 
-            sensordata og oppnådde en R²-score på 0,915. 
-            SHAP-analyse ble brukt for å identifisere hvilke variabler 
+            En XGBoost-modell ble trent til å predikere radonnivåer fra
+            sensordata og oppnådde en R²-score på 0,915.
+            SHAP-analyse ble brukt for å identifisere hvilke variabler
             som hadde størst innvirkning på modellens prediksjoner.
           </p>
 
@@ -628,24 +682,24 @@
           </p>
 
           <div class="prosjektbilder">
-            <img src="radon-1.jpg" alt="Feature importance fra XGBoost-modellen">
-            <img src="radon-2.jpg" alt="SHAP-analyse av radonprediksjon">
+            <img src="radon-1.jpg" alt="Feature importance fra XGBoost-modellen" loading="lazy">
+            <img src="radon-2.jpg" alt="SHAP-analyse av radonprediksjon" loading="lazy">
           </div>
         </article>
 
-        <!-- PROSJEKT 2: KRANPROSJEKT -->
+        <!-- Kranprosjekt -->
         <article class="kort">
           <h3>Kranprosjekt</h3>
 
-<p>
-Oppgaven var å utvikle en lettvektskran som kunne løfte 5 kg ved hjelp av en maksimal inngangskraft på 6 N. 
-Etter å ha undersøkt ulike konsepter ble en løsning basert på en Chinese Windlass og trinseblokk valgt for å oppnå høy mekanisk utveksling med en enkel og robust konstruksjon.
-</p>
+          <p>
+            Oppgaven var å utvikle en lettvektskran som kunne løfte 5 kg ved hjelp av en maksimal inngangskraft på 6 N.
+            Etter å ha undersøkt ulike konsepter ble en løsning basert på en Chinese Windlass og trinseblokk valgt for å oppnå høy mekanisk utveksling med en enkel og robust konstruksjon.
+          </p>
 
-<p>
-  Konstruksjonen ble modellert i CAD, hvor vinsjkomponentene ble 3D-printet i PLA og bærestrukturen laserskåret ved Makerspace OsloMet. 
-  Den ferdige kranen oppfylte alle krav til løftekapasitet, kraft og dimensjoner, og prosjektet ble vurdert til karakter A.
-</p>
+          <p>
+            Konstruksjonen ble modellert i CAD, hvor vinsjkomponentene ble 3D-printet i PLA og bærestrukturen laserskåret ved Makerspace OsloMet.
+            Den ferdige kranen oppfylte alle krav til løftekapasitet, kraft og dimensjoner, og prosjektet ble vurdert til karakter A.
+          </p>
 
           <div class="tagger" aria-label="Temaer">
             <span class="tag">Konstruksjon</span>
@@ -660,17 +714,17 @@ Etter å ha undersøkt ulike konsepter ble en løsning basert på en Chinese Win
           </p>
 
           <div class="prosjektbilder">
-            <img src="kran-1.jpg" alt="Oversiktsbilde av kranen fra Kranprosjektet">
-            <img src="kran-2.jpg" alt="Detaljbilde av kranens konstruksjon">
+            <img src="kran-1.jpg" alt="Oversiktsbilde av kranen fra kranprosjektet" loading="lazy">
+            <img src="kran-2.jpg" alt="Detaljbilde av kranens konstruksjon" loading="lazy">
           </div>
         </article>
 
-        <!-- PROSJEKT 4: STØVSUGERPROSJEKT -->
+        <!-- Støvsugerprosjekt -->
         <article class="kort">
           <h3>Støvsugerprosjekt</h3>
 
           <p>
-            Oppgaven var å utvikle et produksjonsklart designkonsept for en håndholdt støvsuger. 
+            Oppgaven var å utvikle et produksjonsklart designkonsept for en håndholdt støvsuger.
             Gjennom konseptutvikling, komponentvalg og tekniske beregninger ble løsningen dimensjonert med fokus på sugeevne, batteritid, produksjonsvennlighet og kostnad.
           </p>
 
@@ -686,14 +740,14 @@ Etter å ha undersøkt ulike konsepter ble en løsning basert på en Chinese Win
           </div>
 
           <p class="prosjektlenke">
-          <a href="Stovsuger_report.pdf" target="_blank" rel="noopener noreferrer">
-            Se prosjektrapport →
-          </a>
+            <a href="Stovsuger_report.pdf" target="_blank" rel="noopener noreferrer">
+              Se prosjektrapport →
+            </a>
           </p>
 
           <div class="prosjektbilder">
-            <img src="stovsuger-1.jpg" alt="Oversiktsbilde av designet for støvsugeren">
-            <img src="stovsuger-2.jpg" alt="Detaljbilde fra støvsugerprosjektet">
+            <img src="stovsuger-1.jpg" alt="Oversiktsbilde av designet for støvsugeren" loading="lazy">
+            <img src="stovsuger-2.jpg" alt="Detaljbilde fra støvsugerprosjektet" loading="lazy">
           </div>
         </article>
       </section>
@@ -711,6 +765,7 @@ Etter å ha undersøkt ulike konsepter ble en løsning basert på en Chinese Win
 
         <a class="knapp" href="mailto:henrychens@outlook.com">Send e-post</a>
       </section>
+
     </div>
   </main>
 
@@ -718,4 +773,7 @@ Etter å ha undersøkt ulike konsepter ble en løsning basert på en Chinese Win
        BUNNTEKST
        ================================================== -->
   <footer>
-    <div class="container">© 2026 Henry Chen.</div
+    <div class="container">© 2026 Henry Chen.</div>
+  </footer>
+</body>
+</html>
